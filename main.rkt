@@ -3,9 +3,9 @@
 ;; 
 
 (require goblins)
-(require "prisoner.rkt")
+(require "player.rkt")
 
 (module+ main
-  (define p1 (make-prisoner "P1"))
+  (define p1 (make-player "P1"))
 
-  ((prisoner-vat p1) 'call (prisoner-ref p1) 'name))
+  ((player-vat p1) 'call (player-ref p1) 'name))
