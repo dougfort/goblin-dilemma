@@ -13,7 +13,12 @@
 
 (define (^prisoner bcom my-name)
   (methods
-   [(name) my-name]))
+   ;; return our name
+   [(name) my-name]
+
+   ;; "cooperate" or "defect" with the named prisoner
+   [(choose their-name)
+    "defect"]))
 
 (define (make-prisoner name)
   (define p-vat (make-vat))
